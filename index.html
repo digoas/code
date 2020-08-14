@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Forms</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+	<h1>HTML Forms</h1>
+	<p>
+		An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+	</p>
+	<form action="/action_page.php">
+  		<label for="fname">First name:</label><br>
+  		<input type="text" id="fname" name="fname" placeholder="John"><br>
+  		<label for="lname">Last name:</label><br>
+  		<input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+  		<input type="submit" value="Submit">
+	</form><br><br>
+<hr>	
+<main>
+	<h2>The &ltform&gt Element</h2>
+		<div class="codetab">
+			<scan>&ltform&gt</scan><br>
+			<scan>form elements</scan><br>
+			<scan>&lt/form&gt</scan><br><br>
+		</div>
+<hr>
+
+	<h2>The &ltinput&gt Element</h2>
+		<p>	The HTML <b>&ltinput&gt</b> element is the most used form element.<br>
+			An <b>&ltinput&gt</b> element can be displayed in many ways, depending on the type attribute.<br>
+			Here are some examples:<br><br>
+		</p>
+	<table>
+		<thead>
+			<th>Type</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&ltinput type="text"&gt</td>
+				<td>Displays a single-line text input field</td>
+			</tr>
+			<tr>
+				<td>&ltinput type="radio"&gt</td>
+				<td>Displays a radio button (for selecting one of many choices)</td>
+			</tr>
+			<tr>
+				<td>&ltinput type="check"&gt</td>
+				<td>Displays a checkbox (for selecting zero or more of many choices)</td>
+			</tr>
+			<tr>
+				<td>&ltinput type="submit"&gt</td>
+				<td>Displays a submit button (for submitting the form)</td>
+			</tr>
+			<tr>
+				<td>&ltinput type="button"&gt</td>
+				<td>Displays a clickable button</td>
+			</tr>
+
+		</tbody>
+	</table><br><br>
+<hr>
+
+	<h2>Text Fields</h2>
+	<p>The <b>&ltinput type="text"&gt</b> defines a single-line input field for text input.</p>	
+		<div class="codetab">
+			<scan>&ltform&gt</scan><br>
+  			<scan>&ltlabel for="fname"&gtFirst name:&lt/label&gt</scan><br>
+  			<scan>&ltinput type="text" id="fname" name="fname"&gt</scan><br>
+  			<scan>&ltlabel for="lname"&gtLast name:&lt/label&gt</scan><br>
+ 			<scan>&ltinput type="text" id="lname" name="lname"&gt</scan><br>
+			<scan>&lt/form&gt</scan><br><br>			
+		</div><br><br>
+<hr>
+
+	<h2>The &ltlabel&gt Element</h2>
+	<p>	Notice the use of the <b>&ltlabel&gt</b> element in the example above.<br>
+		The <b>&ltlabel&gt</b> tag defines a label for many form elements.<br>
+		The <b>&ltlabel&gt</b> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.<br>
+		The <b>&ltlabel&gt</b> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes)<br>
+		- because when the user clicks the text within the <b>&ltlabel&gt</b> element, it toggles the radio button/checkbox.<br>
+		The for attribute of the <b>&ltlabel&gt</b> tag should be equal to the id attribute of the <b>&ltinput&gt</b> element to bind them together.<br>
+
+	</p><br><br>
+<hr>
+
+	<h2>Radio Buttons</h2>
+	<p>
+		The <b>&ltinput type="radio"&gt</b> defines a radio button.<br>
+		Radio buttons let a user select ONE of a limited number of choices.<br>
+	</p><br>
+		<div class="codetab">
+			<scan>&ltform&gt</scan><br>
+			<scan>&ltinput type="radio" id="male" name="gender" value="male"&gt</scan><br>
+  			<scan>&ltlabel for="male"&gtMale&lt/label&gt</scan><br>
+  			<scan>&ltinput type="radio" id="female" name="gender" value="female"&gt</scan><br>
+ 			<scan>&ltlabel for="female"&gtFemale&lt/label&gt</scan><br>
+  			<scan>&ltinput type="radio" id="other" name="gender" value="other"&gt</scan><br>
+            <scan>&ltlabel for="other"&gtOther&lt/label&gt</scan><br>
+            <scan>&lt/form&gt</scan><br><br>
+		</div>	<br><br>
+<hr>
+
+	<h2>Checkboxes</h2>
+	<p> The <b>&ltinput type="checkbox"&gt</b> defines a <b>checkbox</b>.<br>
+		Checkboxes let a user select ZERO or MORE options of a limited number of choices.<br></p><br>
+		<div class="codetab">
+			    <scan>&ltform&gt</scan><br>
+  				<scan>&ltinput type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt</scan><br>
+  				<scan>&ltlabel for="vehicle1"&gt I have a bike&lt/label&gt</scan><br>
+  				<scan>&ltinput type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt</scan><br>
+  				<scan>&ltlabel for="vehicle2"&gt I have a car&lt/label&gt</scan><br>
+  				<scan>&ltinput type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt</scan><br>
+  				<scan>&ltlabel for="vehicle3"&gt I have a boat&lt/label&gt</scan><br>
+				<scan>&lt/form&gt</scan><br><br>
+		</div><br><br>
+<hr>
+
+	<h2>The Submit Button</h2>
+	<p>
+		The <b>&ltinput type="submit"&gt</b> defines a button for submitting the form data to a form-handler.<br>
+		The form-handler is typically a file on the server with a script for processing input data.<br>
+		The form-handler is specified in the form's <b>action</b> attribute.<br>
+	</p><br><br>
+
+		<div class="codetab">
+			<scan>&ltform action="/action_page.php"&gt</scan><br>
+  			<scan>&ltlabel for="fname"&gtFirst name:&lt/label&gt</scan><br>
+  			<scan>&ltinput type="text" id="fname" name="fname" value="John"&gt</scan><br>
+  			<scan>&ltlabel for="lname"&gtLast name:&lt/label&gt</scan><br>
+  			<scan>&ltinput type="text" id="lname" name="lname" value="Doe"&gt</scan><br>
+  			<scan>&ltinput type="submit" value="Submit"&gt</scan><br>
+			<scan>&lt/form&gt</scan><br><br>	
+		</div><br><br>
+<hr>
+
+	<h2>The Action Attribute</h2>
+	<p>
+		The <b>action</b> attribute defines the action to be performed when the form is submitted.<br>
+		sually, the form data is sent to a file on the server when the user clicks on the submit button.<br>
+		In the example above, the form data is sent to a file called "action_page.php". This file contains a server-side script that handles the form data:<br>
+	</p><br><br>
+		<div class="codetab">
+			<scan>&ltform action="/action_page.php"&gt</scan><br><br>	
+		</div><br><br>
+	<p>
+		If the <b>action</b> attribute is omitted, the action is set to the current page.
+	</p><br><br>
+<hr>
+
+	<h2>The Target Attribute</h2>
+	<p>
+		The <b>target</b> attribute specifies where to display the response that is received after submitting the form.<br>
+		The <b>target</b> attribute can have one of the following values:<br>
+	</p><br><br>
+
+	<table>
+		<thead>
+			<th>Value</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>_blank</td>
+				<td>The response is displayed in a new window or tab</td>
+			</tr>
+			<tr>
+				<td>_self</td>
+				<td>The response is displayed in the same frame</td>
+			</tr>
+			<tr>
+				<td>_parent</td>
+				<td>The response is displayed in the parent frame</td>
+			</tr>
+			<tr>
+				<td>_top</td>
+				<td>The response is displayed in the full body of the window</td>
+			</tr>
+			<tr>
+				<td>framename</td>
+				<td>The response is displayed in a named iframe</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>
+		The default value is <b>_self</b> which means that the response will open i the current window.
+	</p><br>
+	<p>
+		Here, the submitted result will open in a new browser tab:
+	</p>
+		<div class="codetab">
+		<scan>&ltform action="/action_page.php" target="_blank"&gt</scan><br><br>
+		</div><br><br>
+<hr>
+	<h2>The Method Attribute</h2>
+	<p>
+		The <b>method</b> attribute specifies the HTTP method to use used when submitting the form data.<br>
+		The form-data can be sent as URL variables (with <b>method="get"</b>) or as HTTP post transaction (with <b>method="post"</b>).<br>
+		The default HTTP method when submitting form data is GET. 
+	</p><br><br>	
+	<p>This example uses the GET method when submitting the form data:</p>
+		<div class="codetab">
+		<scan>&ltform action="/action_page.php" method="get"&gt</scan><br><br>
+		</div>
+	<p>This example uses the POST method when submitting the form data:</p>	
+		<div class="codetab">
+		<scan class="codetab">&ltform action="/action_page.php" method="post"&gt</scan><br><br>
+		</div>
+<hr>
+</main>
+</body>
+</html>
